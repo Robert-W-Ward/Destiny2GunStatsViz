@@ -46,12 +46,16 @@ for htmlFile in os.listdir(htmlDir):
             with open(filepath,'wb') as jpgFile:
 
                 jpgFile.write(requests.get(url).content)
-            
-
-        tmp = row_text_with_icon.replace('\n',' ').replace('\t','')
-
-
-        table_rows_text.append(re.sub(r"(Legendary|Exotic)\s*|\s+", lambda m: m.group(0).strip() + " ",tmp).strip().replace(' ', ',').replace('%','' ))
+        
+        tmp = re.sub(r'\s+',' ', row_text_with_icon)
+        tmp = re.sub(r'%','',tmp)
+        tmp = tmp.strip()
+        tmp = re.sub(r'(Legendary|Exotic)([A-Z])',r'\1 \2',tmp)
+        tmp = re.sub(r'(Submachine|Grenade|Auto) ',r'\1',tmp)
+        tmp = tmp.replace(' ', '',1)
+        tmp = re.sub(r'(?<=\w)(Legendary|Exotic)', r' \1', tmp)
+        tmp = tmp.replace(' ', ',')
+        table_rows_text.append(tmp)
 
 
     table_rows_text.pop(0)
