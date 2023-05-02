@@ -2,7 +2,7 @@ AutumnWind,Legendary,PulseRifle,3.19,3.74,5.00,6473434e271c84bc9e5b4d5a8408fa26.
 TheImmortal,Legendary,SubmachineGun,2.32,2.68,2.84,4cc364565d395fb23517800bcf13c8df.jpg
 QuicksilverStorm,Exotic,AutoRifle,1.73,2.48,2.34,94c469ee1cb67c6e0ed590f00e8d4f2f.jpg
 IKELOS_SMG_v1_0_3,Legendary,SubmachineGun,1.67,1.70,1.72,295bd8ea78bb786cd5f5f80eaa9be3f4.jpg
-AceofSpades,Exotic,Hand,Cannon,1.60,1.94,2.53,ce5d5c56ffc83fe92b367ec2d4dc1a2a.jpg
+AceofSpades,Exotic,HandCannon,1.60,1.94,2.53,ce5d5c56ffc83fe92b367ec2d4dc1a2a.jpg
 Jotunn,Exotic,FusionRifle,1.59,2.17,0.00233,507250e2d087e20c9c2572113dae8f72.jpg
 LeMonarque,Exotic,CombatBow,1.56,1.76,2.10,0c71441bf8ee516b5a2001532d1f8d01.jpg
 BxR_55Battler,Legendary,PulseRifle,1.51,1.75,2.45,3d56e4f28657abbd96c76836273d2dc7.jpg
@@ -19,10 +19,10 @@ Perpetualis,Legendary,AutoRifle,1.22,1.31,1.33,5c4692ff5786f7f2374d60db03827e23.
 MIDAMulti_Tool,Exotic,ScoutRifle,1.20,1.54,2.44,b481ccc7a201f55e21b561b132112f28.jpg
 AmmitAR2,Legendary,AutoRifle,1.20,1.58,1.72,8b6ace1fb53ea616b1268dc635e5e8fb.jpg
 RufussFury,Legendary,AutoRifle,1.17,1.53,1.63,4002845fcdc09b3cb93c7af7acd5d9d6.jpg
-RoundRobin,Legendary,Hand,Cannon,1.12,1.37,2.02,a9c29fae280a3d6d27a7648b7b8ac31b.jpg
+RoundRobin,Legendary,HandCannon,1.12,1.37,2.02,a9c29fae280a3d6d27a7648b7b8ac31b.jpg
 TheJadeRabbit,Exotic,ScoutRifle,1.11,1.53,2.54,f9259f56c04975f2c92e5617d19d22fa.jpg
 Funnelweb,Legendary,SubmachineGun,1.11,1.02,1.11,744408d69bc8eb8d3767ba30cf7187ac.jpg
-Roarof,the,Bear,Legendary,RocketLauncher,1.04,0.357,0.00022,3b14afa2c42f3e048f3d7cc05d811fd0.jpg
+RoaroftheBear,Legendary,RocketLauncher,1.04,0.357,0.00022,3b14afa2c42f3e048f3d7cc05d811fd0.jpg
 Cloudstrike,Exotic,SniperRifle,1.03,0.876,1.53,c365777c8302772a865d99fb63da8731.jpg
 FelwintersLie,Legendary,Shotgun,0.987,0.778,0.0932,4153f60f3f2f53ee6f7e99fa29cb4bdd.jpg
 JorumsClaw,Legendary,PulseRifle,0.858,0.992,1.35,f23bc5c9dff1893fad7be1ace6c2b501.jpg
@@ -56,7 +56,7 @@ DrangBaroque,Legendary,Sidearm,0.460,0.490,0.339,c428aad101efbaa4af6c26545d11c9d
 GnawingHunger,Legendary,AutoRifle,0.459,0.507,0.521,c4509acb76551495deac51bb29b61248.jpg
 Trust,Legendary,HandCannon,0.458,0.464,0.442,c0d8d9a34bcac362d37fda83bed09f9c.jpg
 PolarisLance,Exotic,ScoutRifle,0.435,0.572,0.980,3bac8dcce9fec2943b7fa5608849d6bc.jpg
-TheLastWord,Exotic,Hand,Cannon,0.431,0.505,0.621,c30f714c7f642951c68069aa92cf06b3.jpg
+TheLastWord,Exotic,HandCannon,0.431,0.505,0.621,c30f714c7f642951c68069aa92cf06b3.jpg
 Thorn,Exotic,HandCannon,0.423,0.446,0.502,ba392591a98adb436d5f34db5af635c1.jpg
 HungJurySR4,Legendary,ScoutRifle,0.393,0.426,0.515,f8f97bd496bf47fdbd39229b2dc7022c.jpg
 RetoldTale,Legendary,Shotgun,0.388,0.293,0.0475,10cf1716674ef61d6487e415dc9f4c3e.jpg
@@ -72,13 +72,13 @@ BiteoftheFox,Legendary,SniperRifle,0.354,0.241,0.328,79f1a1e640cf2077d134fe78a6a
 SeventhSeraphCQC_12,Legendary,Shotgun,0.349,0.243,0.0389,1a5fef325b5b89474523514a933a1a8b.jpg
 MainIngredient,Legendary,FusionRifle,0.349,0.356,0.00093,34b5a87f1d8b531b0682bc3fdc222a6d.jpg
 FoundVerdict,Legendary,Shotgun,0.344,0.276,0.0353,831c5c8e8334c5610588c9df70676344.jpg
-ThePalindromeAdept,Legendary,Hand,Cannon,0.337,0.369,0.545,0f1fc3d1700d227eeabfb80ed2d8e617.jpg
+ThePalindromeAdept,Legendary,HandCannon,0.337,0.369,0.545,0f1fc3d1700d227eeabfb80ed2d8e617.jpg
 MemoryInterdict,Legendary,GrenadeLauncher,0.336,0.162,0.00009,ec0fc34b7199005aeaa415adedb8f63b.jpg
 VerglasCurve,Exotic,CombatBow,0.323,0.268,0.335,de7b4e36fbaced8dfc58c007926a9bb8.jpg
 TyphonGL5,Legendary,GrenadeLauncher,0.322,0.154,0.00007,56a98a88e5c68722366494cc6e1f14b4.jpg
 Krait,Legendary,AutoRifle,0.318,0.348,0.304,d8b62a10a081a57dbaaed103ce6e8506.jpg
 WithoutRemorse,Legendary,Shotgun,0.316,0.229,0.0393,591b5b0f71165859d6855e30a5f50584.jpg
-Forerunner,Exotic,Sidearm,,0.313,0.323,0.547,0a5552b4600022e8e84805751c825726.jpg
+Forerunner,Exotic,Sidearm,0.313,0.323,0.547,0a5552b4600022e8e84805751c825726.jpg
 HardLight,Exotic,AutoRifle,0.308,0.412,0.382,8070b4aa8ef05ed33005d0ea314c575f.jpg
 TheChaperone,Exotic,Shotgun,0.307,0.239,0.270,c5fb814d409f1c0a47e89c5062e2182b.jpg
 IterativeLoop,Legendary,FusionRifle,0.303,0.271,0.00084,5c45042c10f081748be9b11b74144e28.jpg
