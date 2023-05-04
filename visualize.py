@@ -1,6 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-import matplotlib as mlp
+import matplotlib.colors as mcolors
 import numpy as np
 from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 
@@ -20,13 +20,24 @@ def saveGridElements(data, Name):
 
     # Create a scatter plot of Usage vs. Kills
     fig, ax = plt.subplots(figsize=(8, 6))
-    ax.scatter(data['Kills'], data['Usage'])
+    colors = list(mcolors.TABLEAU_COLORS.values())
+    # Scatter plot the data points with different colors for each weapon type
+    type_colors = {}
+    for i, t in enumerate(data['Type'].unique()):
+        d = data[data['Type'] == t]
+        ax.scatter(d['Kills'], d['Usage'], color=colors[i % len(colors)])
+        type_colors[t] = colors[i % len(colors)]
+
     ax.set_title('Usage vs. Kills ({})'.format(Name))
     ax.set_xlabel('Kills')
     ax.set_ylabel('Usage')
-    
-    plt.savefig(Name + '_Usage_vs_Kills.jpg')
-    plt.close()
+    # Add legend with color codes for each weapon type
+    legend_handles = []
+    for t in type_colors:
+        legend_handles.append(ax.scatter([], [], color=type_colors[t], label=t))
+        ax.legend(handles=legend_handles, title='Weapon Type', loc='lower right')
+        plt.savefig(Name + '_Usage_vs_Kills.jpg')
+        plt.close()
 
     # Create a boxplot of Rarity vs. Kills
     fig, ax = plt.subplots(figsize=(8, 6))
