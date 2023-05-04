@@ -5,9 +5,59 @@ import numpy as np
 from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 
 #Notes to self: Nominal, Ordinal, Nominal,Ratio, Ratio Ratio, N/A(Nominal)
+def saveGridElements(data, Name):
+    # Create a bar chart of Average % by Type
+    Average = data.groupby('Type')[['Usage', 'Kills', 'Headshots']].mean()
+    fig, ax = plt.subplots(figsize=(12, 12))
+    Average.plot(kind='bar', ax=ax)
+    ax.set_title('Avg. % by Type ({})'.format(Name))
+    ax.set_xlabel('Weapon Type')
+    ax.set_ylabel('Percentage')
+    ax.set_xticklabels(Average.index, rotation=tickTitleRoationDegrees)
+    ax.legend(['Usage', 'Kills', 'Headshots'])
+    plt.savefig(Name + '_Avg_Percentage_by_Type.jpg')
+    plt.close()
 
+    # Create a scatter plot of Usage vs. Kills
+    fig, ax = plt.subplots(figsize=(8, 6))
+    ax.scatter(data['Kills'], data['Usage'])
+    ax.set_title('Usage vs. Kills ({})'.format(Name))
+    ax.set_xlabel('Kills')
+    ax.set_ylabel('Usage')
+    
+    plt.savefig(Name + '_Usage_vs_Kills.jpg')
+    plt.close()
 
+    # Create a boxplot of Rarity vs. Kills
+    fig, ax = plt.subplots(figsize=(8, 6))
+    ax.boxplot([data[data['Rarity']== c]['Kills'] for c in data['Rarity'].unique()])
+    ax.set_xticklabels(data['Rarity'].unique())
+    ax.set_title('Rarity vs. Kills ({})'.format(Name))
+    ax.set_xlabel('Rarity')
+    ax.set_ylabel('Kills')
+    plt.savefig(Name + '_Rarity_vs_Kills.jpg')
+    plt.close()
 
+    # Create a heatmap of Avg. Kills by Rarity & Type
+    heatmap_data = data.groupby(['Rarity', 'Type'])[['Kills', 'Headshots']].mean().reset_index()
+    heatmap_data_pivot = heatmap_data.pivot_table(index='Type', columns='Rarity', values='Kills')
+    heatmap_data_pivot.fillna(0, inplace=True)
+    fig, ax = plt.subplots(figsize=(8, 6))
+    cax = ax.imshow(heatmap_data_pivot, cmap='coolwarm', aspect='auto')
+    ax.set_title('Avg. Kills by Rarity & Type ({})'.format(Name))
+    ax.set_xlabel('Weapon Type')
+    ax.set_ylabel('Rarity')
+    ax.set_xticks(np.arange(len(heatmap_data_pivot.columns)))
+    ax.set_yticks(np.arange(len(heatmap_data_pivot.index)))
+    ax.set_xticklabels(heatmap_data_pivot.columns)
+    ax.set_yticklabels(heatmap_data_pivot.index)
+    for i in range(len(heatmap_data_pivot.index)):
+        for j in range(len(heatmap_data_pivot.columns)):
+            text = ax.text(j, i, round(heatmap_data_pivot.iloc[i, j], 2), ha="center", va="center", color="w")
+    cbar = fig.colorbar(cax)
+    cbar.set_label('Avg. Kills')
+    plt.savefig(Name + '_Avg_Kills_by_Rarity_Type.jpg')
+    plt.close()
 def genVisGrid(data,Name):
     # Create a figure with subplots
 
@@ -66,7 +116,7 @@ def genVisGrid(data,Name):
     cbar.set_label('Avg. Kills')
 
     plt.savefig(Name+'VisGrid.jpg')
-    extents = axs
+    saveGridElements(data,Name)
 
 tickTitleRoationDegrees = 80
 # Read data from the file 'Competitive PvP.csv'
