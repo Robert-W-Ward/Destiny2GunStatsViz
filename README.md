@@ -4,32 +4,32 @@ A data visualization for the FPS game Destiny 2 to investigate and assess balanc
 
 ## Competative
 
-![CompetativeGrid](jpg/CompetativeVisGrid.png)
+![CompetativeGrid](png/CompetativeVisGrid.png)
 Here are all the the visualizations for Competative
 
-![CompetativeAvgKillsbyRarity](jpg/Competative_Avg_Kills_by_Rarity_Type.png)
+![CompetativeAvgKillsbyRarity](png/Competative_Avg_Kills_by_Rarity_Type.png)
 A box plot for Average kills by rarity
 
-![CompetativeAvgPercentagebyType](jpg/Competative_Avg_Percentage_by_Type.png)
+![CompetativeAvgPercentagebyType](png/Competative_Avg_Percentage_by_Type.png)
 
 
-![CompetativeRarityvsKills](jpg/Competative_Rarity_vs_Kills.png)
+![CompetativeRarityvsKills](png/Competative_Rarity_vs_Kills.png)
 
 
-![CompetativeUsagevsKills](jpg/Competative_Usage_vs_Kills.png)
+![CompetativeUsagevsKills](png/Competative_Usage_vs_Kills.png)
 
 ## Quickplay
 
-![QuickplayGrid](jpg/QuickplayVisGrid.png)
+![QuickplayGrid](png/QuickplayVisGrid.png)
 Here are all the the visualizations for Competative
 
-![QuickplayAvgKillsbyRarity](jpg/Quickplay_Avg_Kills_by_Rarity_Type.png)
+![QuickplayAvgKillsbyRarity](png/Quickplay_Avg_Kills_by_Rarity_Type.png)
 A box plot for Average kills by rarity
 
-![QuickplayAvgPercentagebyType](jpg/Quickplay_Avg_Percentage_by_Type.png)
+![QuickplayAvgPercentagebyType](png/Quickplay_Avg_Percentage_by_Type.png)
 
 
-![QuickplayRarityvsKills](jpg/Quickplay_Rarity_vs_Kills.png)
+![QuickplayRarityvsKills](png/Quickplay_Rarity_vs_Kills.png)
 
 
-![QuickplayUsagevsKills](jpg/Quickplay_Usage_vs_Kills.png)
+![QuickplayUsagevsKills](png/Quickplay_Usage_vs_Kills.png)
