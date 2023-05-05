@@ -128,7 +128,7 @@ def genVisGrid(data,Name):
     cbar = fig.colorbar(cax, ax=axs[1][1])
     cbar.set_label('Avg. Kills')
 
-    plt.savefig(Name+'VisGrid.jpg')
+    plt.savefig(Name+'VisGrid.png')
     saveGridElements(data,Name)
 
 tickTitleRoationDegrees = 80
