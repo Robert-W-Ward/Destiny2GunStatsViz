@@ -18,11 +18,11 @@ for htmlFile in os.listdir(htmlDir):
             filename = os.path.basename(url)
             row_text_with_icon =  row.text+filename
             filepath = os.path.join('jpg',filename)
-            # Create the "jpg" directory if it doesn't exist
             if not os.path.exists("jpg"):
                 os.makedirs("jpg")
-            with open(filepath,'wb') as jpgFile:
-                jpgFile.write(requests.get(url).content)
+            #comment this out so doesn't download lots of unused jpegs
+            #with open(filepath,'wb') as jpgFile:
+                #jpgFile.write(requests.get(url).content)
 
         tmp = re.sub(r' ','',row_text_with_icon,1)
         tmp = re.sub(r'(Exotic)',r'\1 ',tmp)

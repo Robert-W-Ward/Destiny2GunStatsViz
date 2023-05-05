@@ -15,7 +15,7 @@ def saveGridElements(data, Name):
     ax.set_ylabel('Percentage')
     ax.set_xticklabels(Average.index, rotation=tickTitleRoationDegrees)
     ax.legend(['Usage', 'Kills', 'Headshots'])
-    plt.savefig(Name + '_Avg_Percentage_by_Type.jpg')
+    plt.savefig(Name + '_Avg_Percentage_by_Type')
     plt.close()
 
     # Create a scatter plot of Usage vs. Kills
@@ -31,14 +31,16 @@ def saveGridElements(data, Name):
     ax.set_title('Usage vs. Kills ({})'.format(Name))
     ax.set_xlabel('Kills')
     ax.set_ylabel('Usage')
+
     # Add legend with color codes for each weapon type
     legend_handles = []
     for t in type_colors:
         legend_handles.append(ax.scatter([], [], color=type_colors[t], label=t))
-        ax.legend(handles=legend_handles, title='Weapon Type', loc='lower right')
-        plt.savefig(Name + '_Usage_vs_Kills.jpg')
-        plt.close()
+    ax.legend(handles=legend_handles)
 
+    plt.savefig(Name+ '_Usage_vs_Kills')
+    plt.close()
+    
     # Create a boxplot of Rarity vs. Kills
     fig, ax = plt.subplots(figsize=(8, 6))
     ax.boxplot([data[data['Rarity']== c]['Kills'] for c in data['Rarity'].unique()])
@@ -46,7 +48,7 @@ def saveGridElements(data, Name):
     ax.set_title('Rarity vs. Kills ({})'.format(Name))
     ax.set_xlabel('Rarity')
     ax.set_ylabel('Kills')
-    plt.savefig(Name + '_Rarity_vs_Kills.jpg')
+    plt.savefig(Name + '_Rarity_vs_Kills')
     plt.close()
 
     # Create a heatmap of Avg. Kills by Rarity & Type
@@ -67,7 +69,7 @@ def saveGridElements(data, Name):
             text = ax.text(j, i, round(heatmap_data_pivot.iloc[i, j], 2), ha="center", va="center", color="w")
     cbar = fig.colorbar(cax)
     cbar.set_label('Avg. Kills')
-    plt.savefig(Name + '_Avg_Kills_by_Rarity_Type.jpg')
+    plt.savefig(Name + '_Avg_Kills_by_Rarity_Type')
     plt.close()
 def genVisGrid(data,Name):
     # Create a figure with subplots
