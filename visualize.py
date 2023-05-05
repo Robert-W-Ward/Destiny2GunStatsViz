@@ -20,23 +20,25 @@ def saveGridElements(data, Name):
 
     # Create a scatter plot of Usage vs. Kills
     fig, ax = plt.subplots(figsize=(8, 6))
-    colors = list(mcolors.TABLEAU_COLORS.values())
+
+    # Get a list of unique weapon types
+    unique_types = np.unique(data['Type'])
+
+    # Create a custom color map with a unique color for each weapon type
+    num_colors = len(unique_types)
+    cmap = plt.cm.get_cmap('tab20', num_colors)
+
     # Scatter plot the data points with different colors for each weapon type
-    type_colors = {}
-    for i, t in enumerate(data['Type'].unique()):
+    for i, t in enumerate(unique_types):
         d = data[data['Type'] == t]
-        ax.scatter(d['Kills'], d['Usage'], color=colors[i % len(colors)])
-        type_colors[t] = colors[i % len(colors)]
+        ax.scatter(d['Kills'], d['Usage'], color=cmap(i), label=t)
 
     ax.set_title('Usage vs. Kills ({})'.format(Name))
     ax.set_xlabel('Kills')
     ax.set_ylabel('Usage')
 
     # Add legend with color codes for each weapon type
-    legend_handles = []
-    for t in type_colors:
-        legend_handles.append(ax.scatter([], [], color=type_colors[t], label=t))
-    ax.legend(handles=legend_handles)
+    ax.legend(title='Weapon Type')
 
     plt.savefig(Name+ '_Usage_vs_Kills')
     plt.close()
